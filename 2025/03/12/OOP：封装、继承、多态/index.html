@@ -19,23 +19,24 @@
   <meta name="author" content="Moonike">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="OOP：封装、继承、多态封装封装就是把一个对象的状态信息隐藏在对象内部，不允许外部对象直接访问；但是可以对外提供一些方法来操作属性。其他对象只能通过已经授权的操作来和封装的对象进行操作，而无需了解其内部的实现细节。 继承不同类型的对象之间经常会有一些共同点，同时每一个对象中又定义了额外的特性使他们与众不同，我们通过继承就可以使得复用之前的代码非常容易。通过继承，我们可以直接使用父类的属性和方法，又">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2025/03/12/hello-world/index.html">
+<meta property="og:title" content="OOP：封装、继承、多态">
+<meta property="og:url" content="http://example.com/2025/03/12/OOP%EF%BC%9A%E5%B0%81%E8%A3%85%E3%80%81%E7%BB%A7%E6%89%BF%E3%80%81%E5%A4%9A%E6%80%81/index.html">
 <meta property="og:site_name" content="Moonike Blogs">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="OOP：封装、继承、多态封装封装就是把一个对象的状态信息隐藏在对象内部，不允许外部对象直接访问；但是可以对外提供一些方法来操作属性。其他对象只能通过已经授权的操作来和封装的对象进行操作，而无需了解其内部的实现细节。 继承不同类型的对象之间经常会有一些共同点，同时每一个对象中又定义了额外的特性使他们与众不同，我们通过继承就可以使得复用之前的代码非常容易。通过继承，我们可以直接使用父类的属性和方法，又">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-03-12T05:36:50.123Z">
-<meta property="article:modified_time" content="2025-03-12T05:36:50.123Z">
+<meta property="article:published_time" content="2025-03-12T08:58:21.000Z">
+<meta property="article:modified_time" content="2025-03-12T08:58:32.551Z">
 <meta property="article:author" content="Moonike">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Hello World - Moonike Blogs</title>
+  <title>OOP：封装、继承、多态 - Moonike Blogs</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -73,7 +74,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -83,6 +84,17 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
   
@@ -153,18 +165,6 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
               <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="OOP：封装、继承、多态"></span>
           
         </div>
 
@@ -212,7 +212,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-03-12 13:36" pubdate>
+        <time datetime="2025-03-12 16:58" pubdate>
           2025年3月12日 下午
         </time>
       </span>
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          18 字
+          390 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          1 分钟
+          4 分钟
         
       </span>
     
@@ -272,24 +272,26 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">OOP：封装、继承、多态</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h1 id="OOP：封装、继承、多态"><a href="#OOP：封装、继承、多态" class="headerlink" title="OOP：封装、继承、多态"></a>OOP：封装、继承、多态</h1><h1 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h1><p>封装就是把一个对象的状态信息隐藏在对象内部，不允许外部对象直接访问；但是可以对外提供一些方法来操作属性。其他对象只能通过已经授权的操作来和封装的对象进行操作，而无需了解其内部的实现细节。</p>
+<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><p>不同类型的对象之间经常会有一些共同点，同时每一个对象中又定义了额外的特性使他们与众不同，我们通过继承就可以使得复用之前的代码非常容易。通过继承，我们可以直接使用父类的属性和方法，又可以实现自己独特的属性和方法，大大减少了代码量，也让代码结构更加清晰。</p>
+<h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><p>多态主要体现在三个方面：</p>
+<ul>
+<li>子类继承父类</li>
+<li>子类重写父类的方法</li>
+<li>父类引用指向子类的对象</li>
+</ul>
+<p><strong>多态的特点:</strong></p>
+<ul>
+<li>对象类型和引用类型之间具有继承（类）&#x2F;实现（接口）的关系；</li>
+<li>引用类型变量发出的方法调用的到底是哪个类中的方法，必须在程序运行期间才能确定；</li>
+<li>多态不能调用“只在子类存在但在父类不存在”的方法；</li>
+<li>如果子类重写了父类的方法，真正执行的是子类重写的方法，如果子类没有重写父类的方法，执行的是父类的方法。</li>
+</ul>
 
                 
               </div>
@@ -298,6 +300,41 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Java/" class="category-chain-item">Java</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Java/Java%E5%9F%BA%E7%A1%80/" class="category-chain-item">Java基础</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Java/" class="print-no-link">#Java</a>
+      
+    </div>
   
 </div>
 
@@ -307,8 +344,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2025/03/12/hello-world/</div>
+      <div>OOP：封装、继承、多态</div>
+      <div>http://example.com/2025/03/12/OOP：封装、继承、多态/</div>
     </div>
     <div class="license-meta">
       
@@ -352,9 +389,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/03/12/hello-world-1/" title="hello world">
+                      <a href="/2025/03/12/%E5%90%91%E4%B8%8A%E8%BD%AC%E5%9E%8B%E4%B8%8E%E5%90%91%E4%B8%8B%E8%BD%AC%E5%9E%8B/" title="向上转型与向下转型">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">hello world</span>
+                        <span class="hidden-mobile">向上转型与向下转型</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -460,7 +497,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
     </div>
   
   
