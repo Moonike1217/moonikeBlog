@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://ghchart.rshah.org/Moonike1217">
 <meta property="article:published_time" content="2025-03-12T05:47:31.000Z">
-<meta property="article:modified_time" content="2025-03-15T15:07:54.160Z">
+<meta property="article:modified_time" content="2025-03-15T15:30:30.788Z">
 <meta property="article:author" content="Moonike">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://ghchart.rshah.org/Moonike1217">
@@ -440,7 +440,7 @@
                     </div>
                     <div class="hobby-text">
                         <h4>语言学习</h4>
-                        <p>使用多邻国学习外语，享受探索不同语言和文化的乐趣</p>
+                        <p>多邻国重度使用者</p>
                     </div>
                 </div>
 
@@ -452,7 +452,7 @@
                     </div>
                     <div class="hobby-text">
                         <h4>摄影</h4>
-                        <p>富家子弟</p>
+                        <p>富家子弟 手握xt-3</p>
                     </div>
                 </div>
 
@@ -464,7 +464,7 @@
                     </div>
                     <div class="hobby-text">
                         <h4>听歌</h4>
-                        <p>喜欢听歌</p>
+                        <p>喜欢听歌 听的很杂</p>
                     </div>
                 </div>
 
@@ -478,7 +478,7 @@
                     </div>
                     <div class="hobby-text">
                         <h4>旅行</h4>
-                        <p>喜欢旅游但没钱</p>
+                        <p>喜欢旅游 但是没钱</p>
                     </div>
                 </div>
 
@@ -490,7 +490,7 @@
                     </div>
                     <div class="hobby-text">
                         <h4>游戏</h4>
-                        <p>玩的比较杂</p>
+                        <p>曾经很喜欢玩 玩的也比较杂 现在基本只玩手机了...</p>
                     </div>
                 </div>
                 
@@ -526,10 +526,12 @@
 .info-section {
     background: var(--board-bg-color);
     border-radius: 12px;
-    padding: 5px 25px 25px 25px;
-    margin-bottom: 30px;
+    padding: 5px 25px 35px 25px;
+    margin-bottom: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 .info-section:hover {
@@ -541,16 +543,35 @@
 .github-section {
     padding: 0;
     overflow: hidden;
+    background: var(--board-bg-color);
+    border-radius: 12px;
 }
 
 .github-chart-wrapper {
     padding: 20px;
     width: 100%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* 为iOS设备添加平滑滚动 */
+    scrollbar-width: thin; /* Firefox的滚动条样式 */
+    scrollbar-color: rgba(155, 155, 155, 0.5) transparent; /* Firefox的滚动条颜色 */
+}
+
+.github-chart-wrapper::-webkit-scrollbar {
+    height: 6px; /* 滚动条高度 */
+}
+
+.github-chart-wrapper::-webkit-scrollbar-track {
+    background: transparent; /* 滚动条轨道背景 */
+}
+
+.github-chart-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.5); /* 滚动条颜色 */
+    border-radius: 3px; /* 滚动条圆角 */
 }
 
 .github-chart {
     display: block;
+    min-width: 800px; /* 确保图表最小宽度 */
     width: 100%;
     height: auto;
     min-height: 120px;
@@ -587,6 +608,7 @@
 /* 技能分类样式 */
 .skill-category {
     margin-bottom: 25px;
+    overflow: hidden;
 }
 
 .skill-category h3 {
@@ -600,7 +622,7 @@
 .skill-cloud {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 750px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -847,8 +869,30 @@
     }
 
     .skill-cloud {
-        transform: scale(0.6);
-        height: 400px;
+        transform: scale(0.8);
+        height: 500px;
+        min-width: 900px; /* 确保在手机端有足够的宽度显示所有图标 */
+    }
+
+    .skill-category {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+        padding-bottom: 10px; /* 为滚动条留出空间 */
+    }
+
+    .skill-category::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .skill-category::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .skill-category::-webkit-scrollbar-thumb {
+        background-color: rgba(155, 155, 155, 0.5);
+        border-radius: 3px;
     }
 }
 
