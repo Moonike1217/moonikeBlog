@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://ghchart.rshah.org/Moonike1217">
 <meta property="article:published_time" content="2025-03-12T05:47:31.000Z">
-<meta property="article:modified_time" content="2025-03-15T14:39:02.591Z">
+<meta property="article:modified_time" content="2025-03-15T15:07:54.160Z">
 <meta property="article:author" content="Moonike">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://ghchart.rshah.org/Moonike1217">
@@ -423,48 +423,83 @@
         </div>
     </div>
 
-    <!-- 兴趣爱好 -->
+    <!-- 编程之余 -->
     <div class="info-section">
         <h2 class="section-title">
             <i class="section-icon">🎯</i>
-            兴趣爱好
+            Outside of Coding...
         </h2>
         <div class="section-content">
             <div class="hobby-list">
+
                 <div class="hobby-item">
-                    <span class="hobby-icon">📚</span>
-                    <div class="hobby-detail">
-                        <h4>技术阅读</h4>
-                        <p>热爱阅读技术书籍和博客，保持对新技术的学习热情</p>
+                    <div class="hobby-logo">
+                        <svg class="hobby-icon" aria-hidden="true">
+                            <use xlink:href="#icon-duolinguo"></use>
+                        </svg>
+                    </div>
+                    <div class="hobby-text">
+                        <h4>语言学习</h4>
+                        <p>使用多邻国学习外语，享受探索不同语言和文化的乐趣</p>
                     </div>
                 </div>
+
                 <div class="hobby-item">
-                    <span class="hobby-icon">🎮</span>
-                    <div class="hobby-detail">
+                    <div class="hobby-logo">
+                        <svg class="hobby-icon" aria-hidden="true">
+                            <use xlink:href="#icon-fushi"></use>
+                        </svg>
+                    </div>
+                    <div class="hobby-text">
+                        <h4>摄影</h4>
+                        <p>富家子弟</p>
+                    </div>
+                </div>
+
+                <div class="hobby-item">
+                    <div class="hobby-logo">
+                        <svg class="hobby-icon" aria-hidden="true">
+                            <use xlink:href="#icon-yinle"></use>
+                        </svg>
+                    </div>
+                    <div class="hobby-text">
+                        <h4>听歌</h4>
+                        <p>喜欢听歌</p>
+                    </div>
+                </div>
+
+                
+
+                <div class="hobby-item">
+                    <div class="hobby-logo">
+                        <svg class="hobby-icon" aria-hidden="true">
+                            <use xlink:href="#icon-travel-tourism_trave"></use>
+                        </svg>
+                    </div>
+                    <div class="hobby-text">
+                        <h4>旅行</h4>
+                        <p>喜欢旅游但没钱</p>
+                    </div>
+                </div>
+
+                <div class="hobby-item">
+                    <div class="hobby-logo">
+                        <svg class="hobby-icon" aria-hidden="true">
+                            <use xlink:href="#icon-youxiyouxiji"></use>
+                        </svg>
+                    </div>
+                    <div class="hobby-text">
                         <h4>游戏</h4>
-                        <p>享受游戏带来的乐趣，特别喜欢解谜和策略类游戏</p>
+                        <p>玩的比较杂</p>
                     </div>
                 </div>
-                <div class="hobby-item">
-                    <span class="hobby-icon">🎵</span>
-                    <div class="hobby-detail">
-                        <h4>音乐</h4>
-                        <p>喜欢听各种类型的音乐，编程时特别喜欢听轻音乐</p>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
 </div>
 
-
-<!-- 本地测试使用下面的配置 --> 
-<!-- <script src="https://at.alicdn.com/t/c/font_4858950_ethnpgsljp4.js"></script>  -->
-
-<!-- 部署上线使用下面的配置 -->
-
-<script src="https://at.alicdn.com/t/c/font_4858950_ethnpgsljp4.js"></script> 
-<!-- <script src="js/iconfont.js"></script> -->
+<script src="https://at.alicdn.com/t/c/font_4858950_4cn3ghq17xx.js"></script> 
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
@@ -833,6 +868,74 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .skill-tag:hover .skill-name {
     opacity: 1;
+}
+
+/* 兴趣爱好样式 */
+.hobby-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hobby-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    background: var(--board-bg-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-logo {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--board-bg-color);
+    border-radius: 12px;
+    border: 2px solid rgba(125, 125, 125, 0.2);
+}
+
+.hobby-icon {
+    width: 40px;
+    height: 40px;
+    color: #58CC02;  /* Duolingo的品牌绿色 */
+}
+
+.hobby-text {
+    flex: 1;
+}
+
+.hobby-text h4 {
+    margin: 0 0 8px 0;
+    color: var(--text-color);
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.hobby-text p {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+/* 日间模式下的阴影效果 */
+@media (prefers-color-scheme: light) {
+    .hobby-item {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .hobby-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .hobby-logo {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
 }
 </style>
 
